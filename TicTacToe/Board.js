@@ -53,9 +53,17 @@ class Board{
         }
         return["", ""]
     }
-   /* boardFull(){
+     boardFull(){
         //check board full
-    }*/
+        for(let i=0; i<this.cells.length; i++){
+        if(this.cells.mark != z){
+            return "Board is Full"
+        }
+        else{
+            return "Board is Empty"
+        }
+        }
+    }
     printBoard(){
         console.log(this.cells)
     }
