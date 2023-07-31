@@ -45,13 +45,16 @@ class Game{
         }
          if(gameStatus == "draw"){
             this.isGameEnded = true
+            this.board.boardFull()
             return "Game Ended as Draw"
         }
         if(symbolOfWinner == this.players[0].symbol){
             this.isGameEnded = true
+            this.board.printBoard()
            return this.players[0].name + " Its Winner"
         }
         this.isGameEnded = true
+        this.board.printBoard()
         return this.players[1].name + " Its Winner"
     }
 }
